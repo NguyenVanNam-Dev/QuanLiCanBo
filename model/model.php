@@ -3,7 +3,7 @@
 class model{
 	public function fetch($sql){
 
-	 	global $conn;
+		global $conn;
 
 		$result  = mysqli_query($conn, $sql);
 		$arr = array();
@@ -17,7 +17,16 @@ class model{
 
 	public function execute($sql)
 	{
+		global $conn;
+		$result = mysqli_query($conn, $sql);
+		return $result;
+	}
 
+	public function num_rows($sql)
+	{
+		global $conn;
+		$result = mysqli_query($conn, $sql);
+		return mysqli_num_rows($result);
 	}
 } 
- ?>
+?>
