@@ -17,7 +17,7 @@ class controller_nhanvien extends controller
 			$empl_date = $_POST["empl_date"];
 			$empl_gender = $_POST["empl_gender"];
 			$empl_adress = $_POST["empl_adress"];
-			$empl_job = $_POST["empl_job"];
+			$empl_job = $_POST["empl_job"]; 
 			$test = $this->model->execute("insert into tbl_employees(empl_name,empl_date,empl_gender,empl_adress,empl_job) values('$empl_name','$empl_date','$empl_gender','$empl_adress
                 ','$empl_job')");
 			if ($test == true) 
