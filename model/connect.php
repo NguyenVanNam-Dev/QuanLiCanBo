@@ -32,5 +32,11 @@ class Connect {
 		return $result;
 	}
 
+	public function num_rows($sql)
+	{
+		$result = mysqli_query($this->conn, $sql);
+		return mysqli_num_rows($result);
+	}
+
 } 
 ?>
