@@ -1,6 +1,6 @@
 <?php
 
-include "connect.php";
+include_once "connect.php";
 
 class model_worker
 {
@@ -34,7 +34,6 @@ class model_worker
 
 		$sql = "SELECT * FROM `tbl_worker` WHERE worker_name LIKE '%$key%'";
 		return $connect->fetch($sql);
-
 	}
 }
 

@@ -84,10 +84,10 @@
 			</div>
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="index.php">Home</a></li>
-				<li><a href="">Công nhân</a></li>
+<!-- 				<li><a href="">Công nhân</a></li>
 				<li><a href="#">Kỹ sư</a></li>
 				<li><a href="#">Nhân viên</a></li>
-			</ul>
+ -->			</ul>
 		</div>
 	</nav>
 	<?php

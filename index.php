@@ -1,7 +1,7 @@
 <?php
 
-include('controller/controller_congnhan.php');
-$home = new controller_congnhan();
+include('controller/controller_manage.php');
+$home = new controller_manage();
 $trangchu = $home->index();
 
 ?>
