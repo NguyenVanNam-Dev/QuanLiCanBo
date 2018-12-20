@@ -1,11 +1,12 @@
 <?php
 
-class Controller{
+class Controller
+{
 
-	function loadView($view, $data=array()){
+	function loadView($view, $data=array()) 
+	{
 		include("view/layout.php");
 	}
 
 }
 
-?>
