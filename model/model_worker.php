@@ -1,6 +1,7 @@
 <?php
 
 include_once "connect.php";
+include_once "model.php";
 
 class model_worker
 {
@@ -9,6 +10,13 @@ class model_worker
 		$connect = new Connect();
 		$sql = "select * from tbl_worker";
 		return $connect->fetch($sql);
+	}
+	public function getWorker2()
+	{
+		$model = new model();
+		$sql = "select * from tbl_worker";
+		$data = $model->getdata($sql);
+		return $data
 	}
 
 	public function addWorker()

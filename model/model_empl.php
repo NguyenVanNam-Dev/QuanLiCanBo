@@ -4,19 +4,18 @@ include_once "connect.php";
 
 class model_empl
 {
-	public function getempl()
+	public function getEmpl()
 	{
 		$connect = new Connect();
 		$sql = "select * from tbl_employees";
 		return $connect->fetch($sql);
 	}
 
-	public function addempl()
+	public function addEmpl()
 	{
 		$connect = new Connect();
 
-		if (isset($_POST['btn_add_empl'])) 
-		{
+		if (isset($_POST['btn_add_empl'])) {
 			$empl_name = $_POST["empl_name"];
 			$empl_date = $_POST["empl_date"];
 			$empl_gender = $_POST["empl_gender"];
@@ -30,11 +29,10 @@ class model_empl
 
 	public function seachempl($key)
 	{
-		$connect = new Connect();
 
+		$connect = new Connect();
 		$sql = "SELECT * FROM `tbl_employees` WHERE empl_name LIKE '%$key%'";
 		return $connect->fetch($sql);
-
 	}
 }
 

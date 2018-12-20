@@ -14,7 +14,7 @@ class controller_manage extends Controller
 		$m_empl = new model_empl();
 		$m_eng = new model_eng();
 		$worker = $m_worker->getWorker();
-		$empl = $m_empl->getempl();
+		$empl = $m_empl->getEmpl();
 		$eng = $m_eng->geteng();
 		$arrayName = array('worker'=>$worker,'empl'=>$empl,'eng'=>$eng);
 		return $this->loadView('index',$arrayName);
@@ -30,7 +30,7 @@ class controller_manage extends Controller
 	function addEmpl()
 	{
 		$m_empl = new model_empl();
-		$m_empl->addempl();
+		$m_empl->addEmpl();
 		return $this->loadView('view_add_empl');
 	}
 
@@ -42,4 +42,3 @@ class controller_manage extends Controller
 	}
 }
 
-?>

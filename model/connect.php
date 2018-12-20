@@ -6,7 +6,8 @@ class Connect {
 	public $database = "db_qlcb";
 	public $conn = '';
 
-	public function connect(){
+	public function connect()
+	{
 		$this->conn = mysqli_connect($this->hostname,$this->username,$this->password,$this->database);
 		if(!$this->conn){
 			die('lỗi kết nối');
@@ -14,7 +15,8 @@ class Connect {
 		mysqli_query($this->conn, 'SET NAMES utf8');
 	}
 
-	public function fetch($sql){
+	public function fetch($sql)
+	{
 
 		$result  = mysqli_query($this->conn, $sql);
 		$arr = array();
@@ -39,4 +41,3 @@ class Connect {
 	}
 
 } 
-?>
