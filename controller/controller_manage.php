@@ -19,6 +19,17 @@ class controller_manage extends Controller
 		$arrayName = array('worker'=>$worker,'empl'=>$empl,'eng'=>$eng);
 		return $this->loadView('index',$arrayName);
 	}
+		function index()
+	{
+		$m_worker = new model_worker();
+		$m_empl = new model_empl();
+		$m_eng = new model_eng();
+		$worker = $m_worker->getWorker();
+		$empl = $m_empl->getEmpl();
+		$eng = $m_eng->geteng();
+		$arrayName = array('worker'=>$worker,'empl'=>$empl,'eng'=>$eng);
+		return $this->loadView('index',$arrayName);
+	}
 
 	function addWorker()
 	{
