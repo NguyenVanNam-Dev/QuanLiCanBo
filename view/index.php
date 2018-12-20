@@ -66,8 +66,7 @@ $worker = $data['worker'];
       </thead>
       <tbody id="datasearch">
 
-        <?php foreach($worker as $dataWorker)
-        {?>
+        <?php foreach ($worker as $dataWorker) {?>
           <tr>
            <td><?=$dataWorker->worker_id?></td> 
            <td><?=$dataWorker->worker_name?></td> 
